@@ -6,6 +6,11 @@ out/
 .iml
 .idea/
 .idea/*
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+GenericsHomework.iml
 
 ### Eclipse ###
 .apt_generated
