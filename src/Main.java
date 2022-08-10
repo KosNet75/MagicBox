@@ -5,10 +5,10 @@ public class Main {
 
     MagicBox<String> magicBoxStr = new MagicBox<>(3);
 
-    System.out.println(magicBoxStr.add("         венец творения, "));
-    System.out.println(magicBoxStr.add("      бывает страшен он, "));
-    System.out.println(magicBoxStr.add(" когда впадает в ярость, "));
-    System.out.println(magicBoxStr.add(" любого зверя превзойдет. "));
+    System.out.println(magicBoxStr.add("Если б мишки были пчёлами,"));
+    System.out.println(magicBoxStr.add("        То они бы нипочём "));
+    System.out.println(magicBoxStr.add("    Никогда и не подумали "));
+    System.out.println(magicBoxStr.add("   Так высóко строить дом;"));
 
     magicBoxStr.pick();
 
