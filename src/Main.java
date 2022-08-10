@@ -12,7 +12,7 @@ public class Main {
 
     magicBoxStr.pick();
 
-    MagicBox<Integer> magicBoxInt = new MagicBox<>(4);
+    MagicBox<Integer> magicBoxInt = new MagicBox<>(5);
 
     System.out.println(magicBoxInt.add(3));
     System.out.println(magicBoxInt.add(2));
