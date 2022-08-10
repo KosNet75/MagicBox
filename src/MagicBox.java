@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class MagicBox<T> {
 
-  public int size;
+  protected int size;
   protected T[] items;
 
 
@@ -23,7 +23,7 @@ public class MagicBox<T> {
     }
     if (itemsNull
         != 0) {                         // если счетчик пустых не 0, то RuntimeException+сообщение
-      throw new RuntimeException("Осталось " +
+      throw new RuntimeException("Осталось " +   // проверка исключения
           itemsNull + " пустых ячеек");
     } else {
       Random random = new Random();               // если счетчик пустых ноль(те все заполненно)
@@ -46,7 +46,6 @@ public class MagicBox<T> {
     System.out.print("добавление в Box строки: " + itemStrInt
         + " не добавлено  ");  // если не null то НЕ добавляет
     return false;                                                      // и возвращает false
-
 
   }
 
