@@ -2,12 +2,14 @@ import java.util.Random;
 
 public class MagicBox<T> {
 
+  protected String text;
   protected int size;
   protected T[] items;
 
 
-  public MagicBox(int size) {
+  public MagicBox(int size, String text) {
     this.size = size;
+    this.text = text;
     items = (T[]) new Object[size];
 
   }
@@ -27,10 +29,9 @@ public class MagicBox<T> {
     } else {
       Random random = new Random();               // если счетчик пустых ноль(т.е. все заполненно)
       int randomInt = random.nextInt(size);        // то вывод случайной строки
-      System.out.println("Случайная строка: " + items[randomInt] + "\n");
+      System.out.println("Рандомная строка: " + items[randomInt] + "\n");
     }
   }
-
 
   public boolean add(T itemStrInt) {
 
@@ -38,14 +39,14 @@ public class MagicBox<T> {
       if (items[i]
           == null) {                                  // если ячейка массива=null то добавляет в нее
         items[i] = itemStrInt;
-        System.out.print("добавление в Box строки: " + itemStrInt + " ");
-        return true;                                     // и  возвращает true
+        System.out.print("добавление в Box" + text  + itemStrInt + " ");
+        return true;                                       // и  возвращает true
       }
     }
-    System.out.print("В коробке не осталось пустых ячеек.\n");
-    System.out.print("добавление в Box строки: " + itemStrInt
-        + " не добавлено  ");                                      // если не null то НЕ добавляет
-    return false;                                                      // и возвращает false
+    System.out.print("--- В коробке не осталось пустых ячеек ---\n");
+    System.out.print("добавление в Box" + text + itemStrInt
+        + " [не добавлено!]  ");                         // если не null то НЕ добавляет
+    return false;                                           // и возвращает false
 
   }
 

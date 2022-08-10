@@ -3,7 +3,7 @@ public class Main {
 
   public static void main(String[] args) {
 
-    MagicBox<String> magicBoxStr = new MagicBox<>(3);
+    MagicBox<String> magicBoxStr = new MagicBox<>(3," строки: ");
 
     System.out.println(magicBoxStr.add("Если б мишки были пчёлами,"));
     System.out.println(magicBoxStr.add("        То они бы нипочём "));
@@ -12,7 +12,7 @@ public class Main {
 
     magicBoxStr.pick();
 
-    MagicBox<Integer> magicBoxInt = new MagicBox<>(5);
+    MagicBox<Integer> magicBoxInt = new MagicBox<>(5, " числа: ");
 
     System.out.println(magicBoxInt.add(3));
     System.out.println(magicBoxInt.add(2));
