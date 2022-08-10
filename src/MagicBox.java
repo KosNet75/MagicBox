@@ -44,7 +44,7 @@ public class MagicBox<T> {
       }
     }
     System.out.print("добавление в Box строки: " + itemStrInt
-        + " не добавлено  ");  // если не null то НЕ добавляет
+        + " не добавлено  ");                                      // если не null то НЕ добавляет
     return false;                                                      // и возвращает false
 
   }
