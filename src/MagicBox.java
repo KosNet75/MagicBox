@@ -1,4 +1,3 @@
-
 import java.util.Random;
 
 public class MagicBox<T> {
@@ -15,14 +14,15 @@ public class MagicBox<T> {
 
   public void pick() throws RuntimeException {
     int itemsNull = 0;                              //счетчик пустых
- /////   //for (int i = 0; i < items.length; i++) {
- /////   //   if (items[i] == null) {
+    /////   //for (int i = 0; i < items.length; i++) {
+    /////   //   if (items[i] == null) {
     for (T item : items) {
       if (item == null) {                       // если пустая(null) то увеличивает счетчик пустых
         itemsNull++;
       }
     }
-    if (itemsNull != 0) {                         // если счетчик пустых не 0, то RuntimeException+сообщение
+    if (itemsNull
+        != 0) {                         // если счетчик пустых не 0, то RuntimeException+сообщение
       throw new RuntimeException("Осталось " +
           itemsNull + " пустых ячеек");
     } else {
@@ -36,13 +36,15 @@ public class MagicBox<T> {
   public boolean add(T itemStrInt) {
 
     for (int i = 0; i < items.length; i++) {
-      if (items[i] == null) {                                  // если ячейка массива=null то добавляет в нее
+      if (items[i]
+          == null) {                                  // если ячейка массива=null то добавляет в нее
         items[i] = itemStrInt;                                 // и  возвращает true
         System.out.print("добавление в Box строки: " + itemStrInt + " ");
         return true;
       }
     }
-    System.out.print("добавление в Box строки: " + itemStrInt + " не добавлено  ");  // если не null то НЕ добавляет
+    System.out.print("добавление в Box строки: " + itemStrInt
+        + " не добавлено  ");  // если не null то НЕ добавляет
     return false;                                                      // и возвращает false
 
 
