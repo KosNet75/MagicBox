@@ -1,21 +1,39 @@
+
+import java.util.Random;
+import java.util.Scanner;
+
+
 public class Main {
 
   public static void main(String[] args) {
 
-    MagicBox magicBox = new MagicBox();
+    Scanner scanner = new Scanner(System.in);
+
+    Random random = new Random();
 
 
-    magicBox.save("какая то фигня");
-    magicBox.save("то о чем давно забыли");
-    magicBox.save("никто не знает что это");
-    magicBox.save("непонятная хреновина");
 
-// T[] items = (T[]) new Object[РАЗМЕР];
-System.out.println(magicBox.getLast());
+    MagicBox<String> magicBoxStr = new MagicBox<>(3);
+//
+//
+    System.out.println(magicBoxStr.add("         венец творения, "));
+    System.out.println(magicBoxStr.add("      бывает страшен он, "));
+    System.out.println(magicBoxStr.add(" когда впадает в ярость, "));
+    System.out.println(magicBoxStr.add(" любого зверя превзойдет. "));
+
+
+
+    magicBoxStr.pick();
+
+   MagicBox<Integer> magicBoxInt = new MagicBox<>(4);
+
+     System.out.println(magicBoxInt.add(3));
+     System.out.println(magicBoxInt.add(2));
+     System.out.println(magicBoxInt.add(1));
+//     System.out.println(magicBoxInt.add(0));
+       magicBoxInt.pick();
+
 
 
   }
-
-
-
 }
