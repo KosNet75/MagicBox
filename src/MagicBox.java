@@ -16,14 +16,14 @@ public class MagicBox<T> {
 
   public void pick() throws RuntimeException {
     int itemsNull = 0;                              //счетчик пустых
-    /////   //for (int i = 0; i < items.length; i++) {
-    /////   //   if (items[i] == null) {
+
     for (T item : items) {
       if (item == null) {                       // если пустая(null) то увеличивает счетчик пустых
         itemsNull++;
       }
     }
-    if (itemsNull != 0) {                         // если счетчик пустых не 0, то RuntimeException+сообщение
+    if (itemsNull
+        != 0) {                         // если счетчик пустых не 0, то RuntimeException+сообщение
       throw new RuntimeException("Осталось " +   // проверка исключения
           itemsNull + " пустых ячеек");
     } else {
@@ -39,7 +39,7 @@ public class MagicBox<T> {
       if (items[i]
           == null) {                                  // если ячейка массива=null то добавляет в нее
         items[i] = itemStrInt;
-        System.out.print("добавление в Box" + text  + itemStrInt + " ");
+        System.out.print("добавление в Box" + text + itemStrInt + " ");
         return true;                                       // и  возвращает true
       }
     }
