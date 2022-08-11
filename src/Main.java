@@ -3,7 +3,7 @@ public class Main {
 
   public static void main(String[] args) {
 
-    MagicBox<String> magicBoxStr = new MagicBox<>(3," строки: ");
+    MagicBox<String> magicBoxStr = new MagicBox<>(3, " строки: ");
 
     System.out.println(magicBoxStr.add("Если б мишки были пчёлами,"));
     System.out.println(magicBoxStr.add("        То они бы нипочём "));
